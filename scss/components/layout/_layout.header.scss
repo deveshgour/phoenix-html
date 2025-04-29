@@ -1,0 +1,378 @@
+.header {
+    background-color: #051c2c;
+    .navbar {
+        &-brand{
+            img{
+                max-width:120px;
+            }
+        }
+        &-toggle {
+            background-color: transparent;
+            border: none;
+            font-size: 23px;
+            color: color(50);
+            margin-left: 25px;
+            @include media-breakpoint-up(xl) {
+                display: none;
+            }
+        }
+        .dropdown {
+            &-menu {
+                width: 228px;
+                border-radius: 16px;
+                left: 47%;
+                transform: translateX(-50%);
+                margin-top: 10px;
+            }
+            &-item {
+                text-align: center;
+                font-size: 16px;
+                color: rgba(137, 137, 137, 1);
+                padding: 15px 0px;
+                font-family: font(sb);
+                &-or {
+                    display: block;
+                    text-align: center;
+                    position: relative;
+                    & > span {
+                        display: block;
+                        background-color: #fff;
+                        position: relative;
+                        color: rgba(137, 137, 137, 1);
+                        z-index: 1;
+                        width: 50px;
+                        font-size: 16px;
+                        margin: 0 auto;
+                        font-family: font(sb);
+                    }
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        height: 1px;
+                        width: 100%;
+                        left: 0;
+                        right: 0;
+                        top: 11px;
+                        background-color: rgba(217, 217, 217, 1);
+                    }
+                }
+                &:hover,
+                &:focus {
+                    background-color: transparent;
+                    color: color(500);
+                }
+            }
+        }
+        &-center {
+            .nav {
+                &-item {
+                    margin-right: 35px;
+                }
+                &-link {
+                    text-transform: uppercase;
+                    color: color(50);
+                    font-size: 16px;
+                    padding: 0;
+                    position: relative;
+                    font-family: font(md);
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        width: 0;
+                        height: 2px;
+                        background-color: #092635;
+                        bottom: -6px;
+                        left: 0;
+                        opacity: 0;
+                        @include transition(0.3s);
+                    }
+                    &:hover,
+                    &.active {
+                        &:after {
+                            opacity: 1;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+        .nav {
+            &-item {
+                .btn {
+                    text-transform: uppercase;
+                    font-family: font(bd);
+                    &-login {
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    &-afterLogin {
+        background-color: rgba(143, 143, 143, 0.5);
+        backdrop-filter: blur(5px);
+        position: fixed;
+        top: 0;
+        z-index: 999;
+        width: 100%;
+        .container-fluid {
+            padding: 0 30px;
+        }
+        .navbar {
+            &-brand{
+                img{
+                    max-width:120px;
+                }
+            }
+            .dropdown {
+                &-menu {
+                    right: 25px;
+                }
+                &-cart {
+                    position: relative;
+                    margin-right: 50px;
+                    display: flex;
+                    align-items: center;
+                    .icon-cart {
+                        font-size: 26px;
+                        color: color(50);
+                    }
+                    .cartIcon {
+                        font-size: 24px;
+                        color: color(50);
+                    }
+                    .cartCount {
+                        position: absolute;
+                        top: -1px;
+                        right: -10px;
+                        background-color: rgba(255, 92, 92, 1);
+                        border: 1px solid #fff;
+                        color: #fff;
+                        border-radius: 50%;
+                        width: 20px;
+                        height: 20px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 12px;
+                    }
+                }
+                &-userProfile {
+                    display: flex;
+                    align-items: center;
+                    .dropdown-menu {
+                        right: 0;
+                        left: 22px;
+                    }
+                    .userName {
+                        font-size: 16px;
+                        font-family: font(md);
+                        color: color(50);
+                    }
+                    .userImg {
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                        margin-left: 10px;
+                    }
+                    .dropdown-menu {
+                        width: 300px;
+                        padding: 15px;
+                        border: none;
+                        border-radius: 35px;
+                        left: -15px;
+                        margin-top: 30px;
+                        @include box-shadow(0px, 6px, 9px, rgba(0,0,0,.3));
+                        .userProfileItem {
+                            display: flex;
+                            &--profile{
+                                margin-bottom: 10px;
+                            }
+                            &_userImg {
+                                width: 49px;
+                                height: 49px;
+                                max-width: 49px;
+                                border-radius: 50%;
+                                margin-right: 10px;
+                                flex-basis: 49px;
+                                flex-grow: 1;
+                                flex-shrink: 0;
+                                overflow: hidden;
+                                img{
+                                    width: 100%;
+                                    height: 100%;
+                                    border-radius: 50%;
+                                    object-fit: cover;
+                                }
+                            }
+                            &_userName {
+                                text-align: left;
+                                flex-grow: 1;
+                                flex-basis: auto;
+                                flex-shrink: 0;
+                                h3 {
+                                    font-size: 16px;
+                                    font-family: font(md);
+                                    margin-bottom: 0px;
+                                    max-width: 195px;
+                                    white-space: nowrap;
+                                    text-overflow: ellipsis;
+                                    overflow: hidden;
+                                }
+                            }
+                            &_role {
+                                font-size: 16px;
+                                font-family: font(rg);
+                            }
+                            &_memberSince {
+                                display: block;
+                                font-size: 12px;
+                                font-family: font(rg);
+                                &_label {
+                                    color: #3d5954;
+                                }
+                            }
+                        }
+                        .dropdown-item {
+                            padding: 0;
+                            .userProfileItem {
+                                &--link {
+                                    font-size: 16px;
+                                    font-family: font(md);
+                                    display: flex;
+                                    align-items: center;
+                                    padding: 8px 15px;
+                                    border-radius: 10px;
+                                    text-align: left;
+                                    background-color: rgba(103, 137, 131, 0.15);
+                                    margin-bottom: 6px;
+                                    @include transition(0.3s);
+                                    em{
+                                        font-size: 20px;
+                                        color: #3D5954;
+                                        margin-right: 10px;
+                                    }
+                                    &:hover{
+                                        background-color: rgba(103, 137, 131, 0.85);
+                                        color: color(50);
+                                        em{
+                                            color: #fff;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .navbar-center {
+            .nav {
+                &-item {
+                    margin-right: 58px;
+                }
+                &-link {
+                    text-transform: capitalize;
+                    &:after {
+                        background-color: #fff;
+                    }
+                }
+            }
+        }
+    }
+
+    @include media-breakpoint-down(lg) {
+        .navbar {
+            &-center {
+                display: none;
+            }
+            &-nav {
+                flex-direction: row;
+            }
+        }
+    }
+    @include media-breakpoint-down(sm) {
+        .navbar {
+            &-nav {
+                display: none;
+            }
+        }
+    }
+}
+
+.popupHeader {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    &.fixed-top {
+        background-color: rgba(255, 255, 255, 1);
+    }
+    &_inner {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 40px;
+    }
+
+    @include media-breakpoint-down(xl) {
+        &_logo {
+            max-width: 150px;
+        }
+        &_inner {
+            padding: 20px 15px;
+        }
+    }
+}
+
+
+.headerAfterLogin{
+    .header{
+        background-color: color(50);
+        .logo-dark{
+            display: block !important;
+        }
+        .logo-light{
+            display: none !important;
+        }
+        .navbar{
+            &-center {
+                .nav-link{
+                    color: color(500);
+                    &.active{
+                        &:after{
+                            background-color: color(500);
+                        }
+                    }
+                }
+            }
+            .dropdown{
+                &-cart{
+                    .icon-cart{
+                        color: color(500);
+                    }
+                }
+                &-userProfile{
+                    .userName {
+                        color: color(500);
+                    }
+                }
+            }
+        }
+       
+    }
+
+    @include media-breakpoint-down(lg){
+        .header{
+            .logo-dark, .logo-light{
+               max-width: 150px;
+            }
+        }
+        .container-fluid{
+            padding: 0 15px;
+        }
+        .navbar-toggle{
+            color: color(500);
+        }
+    }
+}

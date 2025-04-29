@@ -1,6 +1,7 @@
 .btn{
-    padding:12px 35px;cursor:pointer;font-family:font(sb);font-size: 14px;
-    border-radius: 4px;@include transition(all 0.4s);
+    padding:12px 35px;cursor:pointer;font-family:font(sb);font-size: 18px;
+    text-transform: uppercase;
+    border-radius: 0px;@include transition(all 0.4s);
     &:hover,&:focus,&:active,&:not(:disabled):not(.disabled):active {
         box-shadow: none;outline: none;
     }
@@ -14,6 +15,14 @@
         &:hover,&:focus,&:active,&:not(:disabled):not(.disabled):active {
             border-color:darken(color(500), 8%);box-shadow: none;
             background: darken(color(500), 8%);color:color(50);
+        }
+    }
+    &.btn-info{
+        border-color:color(600);color: color(500);background-color:color(600);
+        @include transition(all 0.5s);
+        &:hover,&:focus,&:active,&:not(:disabled):not(.disabled):active {
+            border-color:darken(color(600), 8%);box-shadow: none;
+            background: darken(color(600), 8%);color:color(50);
         }
     }
 

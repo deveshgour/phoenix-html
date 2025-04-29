@@ -1,17 +1,15 @@
-.font-bd{
-  font-family: 'Inter-Bold';
+.font-bd {
+  font-family: "Inter-Bold";
 }
-.font-sbd{
-  font-family: 'Inter-SemiBold';
+.font-sbd {
+  font-family: "Inter-SemiBold";
 }
-.font-md{
-  font-family: 'Inter-Medium';
+.font-md {
+  font-family: "Inter-Medium";
 }
-.py-60{
-  padding: 60px 0;
-  @include media-breakpoint-down(xl) {
-    padding: 40px 0;
-  }
+.py-40 {
+  padding: 40px 0;
+
   @include media-breakpoint-down(lg) {
     padding: 30px 0;
   }
@@ -22,6 +20,6 @@
     padding: 20px 0;
   }
 }
-.mw-380{
+.mw-380 {
   max-width: 380px;
 }
