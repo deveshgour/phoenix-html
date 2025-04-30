@@ -117,9 +117,13 @@
             }
         }
     }
-
+    .bg-light {
+        background-color: #c3c3c3 !important;
+        color: color(500);
+    }
     .contactSection {
         background-color: color(500);
+      
         &_left {
             padding: 0;
             img {
@@ -131,9 +135,11 @@
             color: color(50);
             padding: 0;
             height: 100%;
+
             &_content {
                 background-color: color(500);
                 padding: 50px;
+               
             }
             h2 {
                 font-size: 28px;
