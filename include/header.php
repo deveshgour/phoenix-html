@@ -15,7 +15,9 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" onclick="toggleSideMenu()"> <em class="icon-menu-icon"></em></a>
+                    <a class="nav-link" href="#" onclick="toggleSideMenu()"> 
+                        <img src="images/toggle-icon.png" class="img-fluid" alt="toggle-icon"/>
+                    </a>
                 </li>
             </ul>
         </div>

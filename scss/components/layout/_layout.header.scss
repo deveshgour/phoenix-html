@@ -2,6 +2,7 @@
     background-color: #051c2c;
     .navbar {
         &-brand{
+            margin:  0 auto;
             img{
                 max-width:120px;
             }
@@ -12,6 +13,11 @@
             font-size: 23px;
             color: color(50);
             margin-left: 25px;
+            position: absolute;
+            right: 15px;
+            img{
+                width: 42px;
+            }
             @include media-breakpoint-up(xl) {
                 display: none;
             }
@@ -281,7 +287,25 @@
             }
         }
     }
-
+    @include media-breakpoint-down(xxl){
+        .navbar{
+            &-brand{
+                img{
+                    max-width: 86px;
+                }
+            }
+            &-center{
+                .nav{
+                    &-link{
+                        font-size: 14px;
+                    }
+                    &-item{
+                        margin-right: 20px;
+                    }
+                }
+            }
+        }
+    }
     @include media-breakpoint-down(lg) {
         .navbar {
             &-center {
