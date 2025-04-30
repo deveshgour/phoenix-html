@@ -1,0 +1,70 @@
+.mapSection{
+    &_left{
+        background-image: url("../images/medical-tower.webp");
+        background-repeat: no-repeat;
+        background-size: 100%s;
+        min-height: 500px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+      
+        &_content{
+            padding: 30px;
+            color: color(50);
+            font-size: 28px;
+            z-index: 9;
+            position: relative;
+            text-align: center;
+            p{
+                margin: 0;
+            }
+            .timing{
+                margin-top: 30px;
+               .days{
+                font-size: 20px;
+                font-family: font(bd);
+               }
+               .time{
+                    font-size: 18px;
+                  
+               }
+
+            }
+            .address{
+                margin-top: 30px;
+                .address1{
+                    font-size: 20px;
+                    font-family: font(bd);
+                }
+                p{
+                    font-size: 16px;
+                   
+                }
+            }
+        }
+        &:after{
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+    }
+    &_right{
+        padding: 0;
+        &_content{
+           s
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
